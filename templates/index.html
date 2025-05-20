@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calories Burnt Predictor</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Calories Burnt Prediction</h1>
+        <form method="POST" action="/predict">
+            <label for="gender">Gender:</label>
+            <select name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="age">Age:</label>
+            <input type="number" step="any" name="age" placeholder="e.g. 25" required>
+
+            <label for="height">Height (cm):</label>
+            <input type="number" step="any" name="height" placeholder="e.g. 170.5" required>
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" step="any" name="weight" placeholder="e.g. 65.2" required>
+
+            <label for="duration">Duration (min):</label>
+            <input type="number" step="any" name="duration" placeholder="e.g. 30" required>
+
+            <label for="heart_rate">Heart Rate:</label>
+            <input type="number" step="any" name="heart_rate" placeholder="e.g. 110" required>
+
+            <label for="body_temp">Body Temperature (°C):</label>
+            <input type="number" step="any" name="body_temp" placeholder="e.g. 37.5" required>
+
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if prediction_text %}
+            <h2>{{ prediction_text }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
