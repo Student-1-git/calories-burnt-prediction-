@@ -1,4 +1,4 @@
-Calories Burnt Prediction Web App
+# Calories Burnt Prediction Web App
 This is a machine learning-powered web application that predicts the number of calories burnt during physical activity. Users can input personal details like age, gender, height, weight, and duration of activity, and receive an estimated calorie burn value.
 The app is built using an XGBoost Regressor model and deployed with a Flask backend, featuring a simple HTML/CSS frontend.
 
@@ -61,7 +61,7 @@ Installation and Setup
    - Save the Model as model.pkl
 In your training script (the Python file where you train your model), add this code at the end:
 import pickle
-# suppose your trained model is called 'model'
+  suppose your trained model is called 'model'
 with open('model.pkl', 'wb') as file:
     pickle.dump(model, file)
 
