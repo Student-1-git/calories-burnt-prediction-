@@ -9,7 +9,7 @@ Language: Python
 Frontend: HTML, CSS
 IDE: Visual Studio Code
 
-Machine Learning Model
+# Machine Learning Model
 Algorithm: XGBoost Regressor
 Training Data Features:
 Gender
@@ -31,7 +31,7 @@ calorie-predictor-webapp/
 ├── requirements.txt       # List of Python dependencies
 └── README.md              # Project overview and setup
 
-Dependencies
+# Dependencies
 Here's a list of packages required:
 Flask
 pandas
@@ -59,13 +59,19 @@ Installation and Setup
    - If 'model.pkl' is included in the repo, you’re good to go.
    - Otherwise,
    - Save the Model as model.pkl
+     
 In your training script (the Python file where you train your model), add this code at the end:
+
 import pickle
-  suppose your trained model is called 'model'
+  
+ // suppose your trained model is called 'model'//
+
 with open('model.pkl', 'wb') as file:
     pickle.dump(model, file)
 
 print("Model saved successfully as model.pkl")
+
+
 This will save the trained XGBoost Regressor model as a model.pkl file in your project directory.
 Make sure the model.pkl file is in the same folder as your app.py file (Flask backend). Your Flask app will load this file to make predictions.
 
