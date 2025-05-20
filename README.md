@@ -67,7 +67,8 @@ import pickle
  // suppose your trained model is called 'model'//
 
 with open('model.pkl', 'wb') as file:
-    pickle.dump(model, file)
+  
+   pickle.dump(model, file)
 
 print("Model saved successfully as model.pkl")
 
